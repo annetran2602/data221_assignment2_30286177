@@ -1,5 +1,5 @@
 # Anne Tran (UCID: 30286177)
-# Assign2_Q1
+# Assign2_Q2
 
 # Open the file
 inputFile=open('sample-file.txt', mode='r')
@@ -15,31 +15,12 @@ noPuncFile=noPuncFile.replace(".", " ") # Remove "."
 splitFile=noPuncFile.split()
 twoCharList=[]
 
-
+# Only keep word has more than and equal to 2 characters
 for word in splitFile:
     if len(word)>=2:
         twoCharList.append(word)
     else:
         twoCharList=twoCharList
-
-
-wordDict={}
-for word in twoCharList:
-    if word not in wordDict:
-        wordDict[word]=1
-    else:
-        wordDict[word]+=1
-
-
-sortedWordDict=dict(sorted(wordDict.items(), key=lambda item: item[1], reverse=True))
-
-count=0
-for word, wordCount in sortedWordDict.items():
-    if count >10:
-        break
-    print(word, "->", wordCount,end=" ")
-    count+=1
-
 
 
 
