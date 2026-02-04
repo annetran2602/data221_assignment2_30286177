@@ -25,7 +25,7 @@ for word in splitFile:
 
 wordDict={}
 for word in twoCharList:
-    if word not in wordDict:
+    if word not in wordDict.keys():
         wordDict[word]=1
     else:
         wordDict[word]+=1
@@ -33,11 +33,12 @@ for word in twoCharList:
 
 sortedWordDict=dict(sorted(wordDict.items(), key=lambda item: item[1], reverse=True))
 
-count=0
+# Print out the 10 most frequent word from the dict
+count=1
 for word, wordCount in sortedWordDict.items():
     if count >10:
-        break
-    print(word, "->", wordCount,end=" ")
+        break # stop printing
+    print(word, "->", wordCount,end=" ") #print word & its wordCount in one line
     count+=1
 
 
