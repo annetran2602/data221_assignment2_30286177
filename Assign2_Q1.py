@@ -41,6 +41,8 @@ for word, wordCount in sortedWordDict.items():
     print(word, "->", wordCount,end=" ") #print word & its wordCount in one line
     count+=1
 
+inputFile.close()
+
 
 
 
